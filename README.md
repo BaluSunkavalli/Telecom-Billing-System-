@@ -26,17 +26,49 @@ src/
 data/
   customers.txt
 
-## Compilation (Windows - VS Code)
+## Build Instructions
 
-gcc src/main.c src/customer.c src/billing.c -o telecom
+### Prerequisites
 
-Run:
+Make sure the following tools are installed:
 
-./telecom
+* GCC (MinGW for Windows)
+* CMake (version 3.10 or higher)
 
-## Example Billing Formula
+Check installation:
 
-Bill = (Call Minutes × 0.5) + (SMS × 0.2) + (Data GB × 10)
+```
+gcc --version
+cmake --version
+```
+
+---
+
+## Build Using CMake
+
+### Step 1: Clone the Repository
+
+git clone https://github.com/yourusername/Telecom-Billing-System.git
+cd Telecom-Billing-System
+
+### Step 2: Create Build Directory
+mkdir build
+cd build
+
+### Step 3: Generate Build Files
+For MinGW (Windows):
+cmake -G "MinGW Makefiles" ..
+
+### Step 4: Compile the Project
+mingw32-make
+This will generate the executable:
+telecom.exe
+
+### Step 5: Run the Program
+./telecom.exe
+Run the program:
+./telecom.exe
+
 
 ## Author
 Balu Sunkavalli
